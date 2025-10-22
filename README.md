@@ -49,3 +49,28 @@ LifeOnLand-SplashScreen/
 4. After another **4 seconds**, the page automatically redirects to `student_2.html`.
 
 ---
+
+## 🖋️ Technologies Used
+
+| Technology | Purpose |
+|-------------|----------|
+| **HTML5** | Structure and layout |
+| **CSS3** | Styling, animations, and responsive design |
+| **JavaScript** | Splash delay and redirection |
+| **Google Fonts (Poppins)** | Modern and clean typography |
+| **MP4 Video** | Background visual element |
+
+---
+
+## 💡 Customization
+
+You can easily modify the following:
+- **Change Redirect Page:**  
+  Update the redirect URL in the JavaScript section:
+  ```js
+  window.location.href = 'your-page.html';
+  ```
+- **Update Background Video:**  
+  Replace `splashvideo.mp4` with your own video file.
+- **Add or Remove Group Members:**  
+  Edit the `<ul>` section under **Group Members**.
