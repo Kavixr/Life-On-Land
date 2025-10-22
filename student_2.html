@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CourseWork</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      overflow-x: hidden;
+      color: #fff;
+    }
+
+    /* ---------- Background Video ---------- */
+    .VideoBackground {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: -2;
+    }
+
+    .VideoBackground video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(65%);
+    }
+
+    /* ---------- Navbar ---------- */
+    nav {
+      backdrop-filter: blur(8px);
+      background: rgba(0, 0, 0, 0.3);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 60px;
+      animation: fadeDown 1.2s ease;
+    }
+
+    @keyframes fadeDown {
+      0% {transform: translateY(-60px); opacity: 0;}
+      100% {transform: translateY(0); opacity: 1;}
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 14px;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #4CAF50;
+    }
+
+    nav a.active {
+      color: #4CAF50;
+      border-bottom: 2px solid #4CAF50;
+      padding-bottom: 3px;
+    }
+
+    nav .header-logo {
+      height: 55px;
+    }
+
+    /* ---------- Hero Section ---------- */
+    .contentContainer {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 1;
+      padding-left: 7%;
+      width: 50%;
+      animation: fadeIn 2s ease;
+    }
+
+    @keyframes fadeIn {
+      0% {opacity: 0; transform: translateY(-30px);}
+      100% {opacity: 1; transform: translateY(-50%);}
+    }
+
+    h1 {
+      font-size: 90px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      line-height: 1;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.6;
+      color: #f1f1f1;
+    }
+
+    button {
+      margin-top: 35px;
+      background: linear-gradient(135deg, #4CAF50, #1abc9c);
+      color: #fff;
+      border: none;
+      border-radius: 30px;
+      padding: 14px 32px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: 0.4s ease;
+      box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+    }
+
+    button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(76, 175, 80, 0.5);
+    }
+
+    button a {
+      text-decoration: none;
+      color: white;
+    }
+
+    /* ---------- Cards Section ---------- */
+    .col {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      width: 90%;
+      margin: 7% auto;
+      gap: 30px;
+      z-index: 2;
+    }
+
+    .card {
+      width: 360px;
+      height: 260px;
+      border-radius: 15px;
+      overflow: hidden;
+      position: relative;
+      background-size: cover;
+      background-position: center;
+      cursor: pointer;
+      transition: transform 0.5s, box-shadow 0.5s;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.45);
+    }
+
+    .card:hover {
+      transform: translateY(-10px) scale(1.03);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    }
+
+    .card h3, .card p, .card button {
+      position: relative;
+      z-index: 2;
+    }
+
+    .card h3 {
+      font-size: 22px;
+      text-transform: capitalize;
+      text-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+      margin: 20px;
+    }
+
+    .card p {
+      color: #f8f8f8;
+      font-size: 14px;
+      margin: 0 20px 15px 20px;
+      line-height: 1.4;
+    }
+
+    .card button {
+      margin-left: 20px;
+      background: rgba(255, 255, 255, 0.9);
+      color: #000;
+      font-weight: 600;
+    }
+
+    .card1 { background-image: url('Biodiversity.jpg'); }
+    .card2 { background-image: url('forests.jpg'); }
+    .card3 { background-image: url('mountains.jpg'); }
+    .card4 { background-image: url('Desertification.jpg'); }
+
+    /* ---------- Footer ---------- */
+    footer {
+      background: rgba(0, 0, 0, 0.8);
+      color: white;
+      text-align: center;
+      padding: 60px 20px 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .links {
+      display: inline-block;
+      margin-bottom: 20px;
+      background: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .links:hover {
+      background: #45a049;
+    }
+
+    .socialIcons {
+      margin: 20px 0;
+    }
+
+    .socialIcons a {
+      color: #fff;
+      font-size: 24px;
+      margin: 0 10px;
+      transition: 0.3s;
+    }
+
+    .socialIcons a:hover {
+      color: #4CAF50;
+    }
+
+    .footerBottom p {
+      color: #ccc;
+      font-size: 14px;
+    }
+
+    .designer {
+      color: #4CAF50;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="VideoBackground">
+    <video autoplay muted loop>
+      <source src="HomebacgroundVideo.mp4" type="video/mp4" />
+    </video>
+  </div>
+
+  <nav>
+    <div class="nav-left">
+      <a href="student_2.html" class="active">Home</a>
+      <a href="Aboutus.html">About Us</a>
+      <a href="Gallery.html">Gallery</a>
+      <a href="Shop.html">Shop</a>
+      <a href="feedbackform.html">Feedback</a>
+      <a href="USERPROFILE.html">User Info</a>
+      <a href="Student4_SVG.html">Sitemap</a>
+    </div>
+    <img src="logo.png" alt="logo" class="header-logo" />
+  </nav>
+
+  <div class="contentContainer">
+    <h1>LIFE<br>ON LAND</h1>
+    <p>Protect, restore and promote sustainable use of terrestrial ecosystems,<br>
+      sustainably manage forests, combat desertification,<br>
+      and halt and reverse land degradation and biodiversity loss.
+    </p>
+    <button><a href="https://sdgs.un.org/goals/goal15" target="_blank">Explore</a></button>
+  </div>
+
+  <div class="col">
+    <div class="card card1">
+      <h3>Biodiversity and ecosystems</h3>
+      <p>Protect, restore, and promote sustainable terrestrial ecosystems.</p>
+      <button><a href="Biodiversity.html">See more</a></button>
+    </div>
+
+    <div class="card card2">
+      <h3>Forests</h3>
+      <p>Protect, restore and sustainably manage forest ecosystems.</p>
+      <button><a href="STUDENT-2-Content-Page-Forest.html">See more</a></button>
+    </div>
+
+    <div class="card card3">
+      <h3>Mountains</h3>
+      <p>Conserve mountain ecosystems for sustainable biodiversity.</p>
+      <button><a href="Student-Choice.html">See more</a></button>
+    </div>
+
+    <div class="card card4">
+      <h3>Desertification & Drought</h3>
+      <p>Restore degraded lands and prevent desertification.</p>
+      <button><a href="#">See more</a></button>
+    </div>
+  </div>
+
+  <footer>
+    <a class="links" href="student2-page-editor.html">Page Editor</a>
+    <div class="socialIcons">
+      <a href="#"><i class="fa-brands fa-facebook"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#"><i class="fa-brands fa-twitter"></i></a>
+      <a href="#"><i class="fa-brands fa-google-plus"></i></a>
+      <a href="#"><i class="fa-brands fa-youtube"></i></a>
+    </div>
+    <div class="footerBottom">
+      <p>Copyright ©2024 | Designed by <span class="designer">Praveen</span></p>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const navItems = document.querySelectorAll("nav a");
+      navItems.forEach(item => {
+        item.addEventListener("click", () => {
+          navItems.forEach(nav => nav.classList.remove("active"));
+          item.classList.add("active");
+        });
+      });
+    });
+  </script>
+</body>
+</html>
