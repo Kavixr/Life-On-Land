@@ -25,3 +25,27 @@ This project is part of the *Life On Land* theme, emphasizing unity, stewardship
 - 🖋️ **Google Fonts (Poppins)**
 
 ---
+
+## 🧱 Project Structure
+
+```
+LifeOnLand-SplashScreen/
+│
+├── index.html          # Main splash screen file
+├── splashvideo.mp4     # Background video file
+├── loader.gif          # Loading animation
+├── student_2.html      # Next page to redirect
+├── README.md           # Project documentation
+└── assets/             # (Optional) Folder for future assets
+```
+
+---
+
+## ⚙️ How It Works
+
+1. The splash screen plays a **looping background video** with dimmed brightness.
+2. The text (title, quote, and members) **fades in with smooth animations**.
+3. After **1 second**, the **loader** (`loader.gif`) appears.
+4. After another **4 seconds**, the page automatically redirects to `student_2.html`.
+
+---
