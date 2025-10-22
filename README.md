@@ -74,3 +74,43 @@ You can easily modify the following:
   Replace `splashvideo.mp4` with your own video file.
 - **Add or Remove Group Members:**  
   Edit the `<ul>` section under **Group Members**.
+
+  ---
+
+## 👩‍💻 Contributors
+
+| Name | Role |
+|------|------|
+| **S.D.P.Y. Sandanayaka** | Project Member |
+| **C.S. Wijewantha** | Project Member |
+| **R.M.M. Kavindu Uppala Rajapaksha** | Project Member |
+
+---
+
+## ✨ Animations
+
+- **fadeIn** – gradual appearance  
+- **fadeInDown** – slides text downward into view  
+- **fadeInUp** – slides text upward into view  
+- **loader** – smooth reveal with shadow glow
+
+---
+
+## 📁 Assets Credit
+
+- 🎥 Background video – royalty-free video (e.g., Pexels / Pixabay)  
+- 🌀 Loader GIF – custom loading animation  
+- 🖋 Font: [Poppins by Google Fonts](https://fonts.google.com/specimen/Poppins)
+
+---
+
+## 🧾 License
+
+This project is created for **educational and presentation purposes**.  
+You may modify and reuse it with proper credit to the original contributors.
+
+---
+
+## 🌱 “Together for a Greener Tomorrow”
+
+> Designed and developed with 💚 by **Team Life On Land**
