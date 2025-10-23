@@ -3,10 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CourseWork</title>
+  <title>Life on Land | Wildlife</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
   <style>
+    /* ------------------- Reset & Base ------------------- */
     * {
       margin: 0;
       padding: 0;
@@ -17,9 +19,10 @@
     body {
       overflow-x: hidden;
       color: #fff;
+      background: #000;
     }
 
-    /* ---------- Background Video ---------- */
+    /* ------------------- Background Video ------------------- */
     .VideoBackground {
       position: fixed;
       top: 0;
@@ -37,11 +40,10 @@
       filter: brightness(65%);
     }
 
-    /* ---------- Navbar ---------- */
+    /* ------------------- Navbar ------------------- */
     nav {
       backdrop-filter: blur(8px);
-      background: rgba(0, 0, 0, 0.3);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+      background: rgba(0, 0, 0, 0.4);
       position: fixed;
       top: 0;
       width: 100%;
@@ -49,19 +51,14 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 12px 60px;
-      animation: fadeDown 1.2s ease;
-    }
-
-    @keyframes fadeDown {
-      0% {transform: translateY(-60px); opacity: 0;}
-      100% {transform: translateY(0); opacity: 1;}
+      padding: 15px 60px;
+      animation: fadeDown 1s ease;
     }
 
     nav a {
       color: #fff;
       text-decoration: none;
-      margin: 0 14px;
+      margin: 0 15px;
       font-weight: 500;
       transition: 0.3s;
     }
@@ -80,82 +77,93 @@
       height: 55px;
     }
 
-    /* ---------- Hero Section ---------- */
-    .contentContainer {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      z-index: 1;
-      padding-left: 7%;
-      width: 50%;
-      animation: fadeIn 2s ease;
+    @keyframes fadeDown {
+      from { transform: translateY(-40px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
     }
 
-    @keyframes fadeIn {
-      0% {opacity: 0; transform: translateY(-30px);}
-      100% {opacity: 1; transform: translateY(-50%);}
+    /* ------------------- Hero Section ------------------- */
+    .hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 0 8%;
+      position: relative;
+      text-shadow: 0 3px 8px rgba(0, 0, 0, 0.6);
     }
 
-    h1 {
+    .hero h1 {
       font-size: 90px;
       font-weight: 700;
-      letter-spacing: 2px;
-      line-height: 1;
+      line-height: 1.1;
       margin-bottom: 20px;
+      animation: fadeInUp 1.5s ease;
     }
 
-    p {
+    .hero p {
       font-size: 18px;
       line-height: 1.6;
       color: #f1f1f1;
+      max-width: 700px;
+      animation: fadeInUp 2s ease;
     }
 
-    button {
+    .hero button {
       margin-top: 35px;
       background: linear-gradient(135deg, #4CAF50, #1abc9c);
       color: #fff;
       border: none;
       border-radius: 30px;
       padding: 14px 32px;
-      font-size: 14px;
+      font-size: 15px;
       cursor: pointer;
       transition: 0.4s ease;
       box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+      animation: fadeInUp 2.3s ease;
     }
 
-    button:hover {
+    .hero button:hover {
       transform: translateY(-3px);
       box-shadow: 0 6px 20px rgba(76, 175, 80, 0.5);
     }
 
-    button a {
-      text-decoration: none;
-      color: white;
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
-    /* ---------- Cards Section ---------- */
+    /* ------------------- Cards Section ------------------- */
+    .section {
+      background: rgba(0, 0, 0, 0.65);
+      backdrop-filter: blur(8px);
+      padding: 100px 0;
+      margin-top: -60px;
+      position: relative;
+      z-index: 2;
+    }
+
     .col {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       align-items: flex-start;
       width: 90%;
-      margin: 7% auto;
+      margin: 0 auto;
       gap: 30px;
-      z-index: 2;
     }
 
     .card {
-      width: 360px;
-      height: 260px;
+      width: 330px;
+      height: 230px;
       border-radius: 15px;
       overflow: hidden;
       position: relative;
       background-size: cover;
       background-position: center;
-      cursor: pointer;
-      transition: transform 0.5s, box-shadow 0.5s;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
     }
 
     .card::before {
@@ -167,7 +175,7 @@
 
     .card:hover {
       transform: translateY(-10px) scale(1.03);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
     }
 
     .card h3, .card p, .card button {
@@ -178,7 +186,6 @@
     .card h3 {
       font-size: 22px;
       text-transform: capitalize;
-      text-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
       margin: 20px;
     }
 
@@ -194,6 +201,16 @@
       background: rgba(255, 255, 255, 0.9);
       color: #000;
       font-weight: 600;
+      border: none;
+      border-radius: 20px;
+      padding: 8px 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .card button:hover {
+      background: #4CAF50;
+      color: #fff;
     }
 
     .card1 { background-image: url('Biodiversity.jpg'); }
@@ -201,9 +218,9 @@
     .card3 { background-image: url('mountains.jpg'); }
     .card4 { background-image: url('Desertification.jpg'); }
 
-    /* ---------- Footer ---------- */
+    /* ------------------- Footer ------------------- */
     footer {
-      background: rgba(0, 0, 0, 0.8);
+      background: rgba(0, 0, 0, 0.9);
       color: white;
       text-align: center;
       padding: 60px 20px 20px;
@@ -251,6 +268,20 @@
       font-weight: 600;
       letter-spacing: 1px;
     }
+
+    /* ------------------- Responsive ------------------- */
+    @media (max-width: 992px) {
+      .hero h1 { font-size: 60px; }
+      .hero p { font-size: 16px; }
+      nav { padding: 10px 30px; }
+    }
+
+    @media (max-width: 600px) {
+      .hero { padding: 0 5%; }
+      .hero h1 { font-size: 48px; }
+      .hero p { font-size: 15px; }
+      .card { width: 90%; }
+    }
   </style>
 </head>
 
@@ -274,41 +305,43 @@
     <img src="logo.png" alt="logo" class="header-logo" />
   </nav>
 
-  <div class="contentContainer">
+  <!-- Hero Section -->
+  <section class="hero">
     <h1>LIFE<br>ON LAND</h1>
-    <p>Protect, restore and promote sustainable use of terrestrial ecosystems,<br>
-      sustainably manage forests, combat desertification,<br>
-      and halt and reverse land degradation and biodiversity loss.
-    </p>
-    <button><a href="https://sdgs.un.org/goals/goal15" target="_blank">Explore</a></button>
-  </div>
+    <p>Protect, restore and promote sustainable use of terrestrial ecosystems, sustainably manage forests, combat desertification, and halt and reverse land degradation and biodiversity loss.</p>
+    <button onclick="window.open('https://sdgs.un.org/goals/goal15', '_blank')">Explore</button>
+  </section>
 
-  <div class="col">
-    <div class="card card1">
-      <h3>Biodiversity and ecosystems</h3>
-      <p>Protect, restore, and promote sustainable terrestrial ecosystems.</p>
-      <button><a href="Biodiversity.html">See more</a></button>
+  <!-- Cards Section -->
+  <section class="section">
+    <div class="col">
+      <div class="card card1">
+        <h3>Biodiversity and ecosystems</h3>
+        <p>Protect, restore, and promote sustainable terrestrial ecosystems.</p>
+        <button onclick="location.href='Biodiversity.html'">See more</button>
+      </div>
+
+      <div class="card card2">
+        <h3>Forests</h3>
+        <p>Protect, restore and sustainably manage forest ecosystems.</p>
+        <button onclick="location.href='STUDENT-2-Content-Page-Forest.html'">See more</button>
+      </div>
+
+      <div class="card card3">
+        <h3>Mountains</h3>
+        <p>Conserve mountain ecosystems for sustainable biodiversity.</p>
+        <button onclick="location.href='Student-Choice.html'">See more</button>
+      </div>
+
+      <div class="card card4">
+        <h3>Desertification & Drought</h3>
+        <p>Restore degraded lands and prevent desertification.</p>
+        <button>See more</button>
+      </div>
     </div>
+  </section>
 
-    <div class="card card2">
-      <h3>Forests</h3>
-      <p>Protect, restore and sustainably manage forest ecosystems.</p>
-      <button><a href="STUDENT-2-Content-Page-Forest.html">See more</a></button>
-    </div>
-
-    <div class="card card3">
-      <h3>Mountains</h3>
-      <p>Conserve mountain ecosystems for sustainable biodiversity.</p>
-      <button><a href="Student-Choice.html">See more</a></button>
-    </div>
-
-    <div class="card card4">
-      <h3>Desertification & Drought</h3>
-      <p>Restore degraded lands and prevent desertification.</p>
-      <button><a href="#">See more</a></button>
-    </div>
-  </div>
-
+  <!-- Footer -->
   <footer>
     <a class="links" href="student2-page-editor.html">Page Editor</a>
     <div class="socialIcons">
