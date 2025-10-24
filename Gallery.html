@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photo Gallery</title>
+  <link rel="stylesheet" href="Gallery.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="logo"><img src="logo.png" alt="Logo"></div>
+    <ul class="nav-links">
+      <li><a href="student_2.html">Home</a></li>
+      <li><a href="Aboutus.html">About Us</a></li>
+      <li><a href="Gallery.html" class="active">Gallery</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="feedbackform.html">Feedback</a></li>
+      <li><a href="USERPROFILE.html">User Info</a></li>
+      <li><a href="Student4_SVG.html">Sitemap</a></li>
+    </ul>
+  </nav>
+
+  <!-- Header -->
+  <header class="gallery-header">
+    <h1>🌿 Photo Gallery</h1>
+    <p>Explore the beauty of biodiversity and conservation around the world.</p>
+  </header>
+
+  <!-- Control Panel -->
+  <section class="controls">
+    <div class="control-section">
+      <h3>Background Color:</h3>
+      <button onclick="setBgColor('yellow')">Yellow</button>
+      <button onclick="setBgColor('white')">White</button>
+      <button onclick="setBgColor('lightblue')">Blue</button>
+      <button onclick="randomBgColor()">Random</button>
+    </div>
+
+    <div class="control-section">
+      <h3>Text Color:</h3>
+      <button onclick="setTextColor('red')">Red</button>
+      <button onclick="setTextColor('purple')">Purple</button>
+      <button onclick="setTextColor('green')">Green</button>
+      <button onclick="randomTextColor()">Random</button>
+    </div>
+  </section>
+
+  <!-- Gallery Grid -->
+  <section class="gallery">
+    <div class="card">
+      <img src="image.1.jpg" alt="Biodiversity Hotspots">
+      <div class="card-content">
+        <h3>Biodiversity Hotspots</h3>
+        <p>Investigate areas with remarkably high biodiversity and their global importance.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="image.2.jpg" alt="Forest Conservation">
+      <div class="card-content">
+        <h3>Forest Conservation</h3>
+        <p>Forests play a vital role in preserving biodiversity and sustaining life.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="image_3.jpg" alt="Desertification Mitigation">
+      <div class="card-content">
+        <h3>Desertification Mitigation</h3>
+        <p>Explore methods for preventing desertification and promoting sustainable land use.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="image_4.jpg" alt="Wetland Preservation">
+      <div class="card-content">
+        <h3>Wetland Preservation</h3>
+        <p>Wetlands are essential for biodiversity, water regulation, and climate balance.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="image_5.jpeg" alt="Protected Areas">
+      <div class="card-content">
+        <h3>Protected Areas</h3>
+        <p>Discover the importance of national parks and marine sanctuaries in conservation.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="image_6.jpeg" alt="Wildlife Corridors">
+      <div class="card-content">
+        <h3>Wildlife Corridors</h3>
+        <p>These corridors enhance genetic diversity and ecosystem resilience.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="image.7.png" alt="Community Conservation">
+      <div class="card-content">
+        <h3>Community-Based Conservation</h3>
+        <p>Community participation leads to long-term sustainability in ecosystem protection.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="image_8.jpg" alt="Climate Change Resilience">
+      <div class="card-content">
+        <h3>Climate Change Resilience</h3>
+        <p>Explore strategies that enhance ecosystems’ adaptability to climate challenges.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="social-icons">
+      <a href="#"><i class="fa-brands fa-facebook"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#"><i class="fa-brands fa-twitter"></i></a>
+      <a href="#"><i class="fa-brands fa-youtube"></i></a>
+    </div>
+    <p>© 2024 Designed by <span class="designer">Kavindu</span> | <a href="Student-Choice-1.html">Page Editor</a></p>
+  </footer>
+
+  <script src="Gallery.js"></script>
+</body>
+</html>
